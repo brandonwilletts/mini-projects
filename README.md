@@ -2,13 +2,13 @@
 
 Concept-driven software engineering mini-projects covering backend development, distributed systems, AI engineering, and machine learning.
 
-General Principles:
+#### General Principles:
 - One concept per mini-project.
 - Projects should take roughly 30–120 minutes.
 - Focus on concepts over frameworks.
 - Build experiments, not products.
 
-Each mini-project README should answer:
+#### Each mini-project README should answer:
 - What problem does this concept solve?
 - How does it work?
 - When would you use it?
@@ -19,7 +19,9 @@ Each mini-project README should answer:
 
 ### Library API
 
-#### 1. Project Set-up & Configuration: Configure linting, formatting, gitignore, and separate test / dev / prod environments, variables, and scripts.
+#### 1. Project Set-up & Configuration
+Configure linting, formatting, gitignore, and separate test / dev / prod environments, variables, and scripts.
+
 - Typescript
 - ESLint
 - Prettier
@@ -52,7 +54,9 @@ config.server.port
 config.database.url
 config.jwt.secret
 
-#### 2. HTTP Server: Build a web server using Node's http module.
+#### 2. HTTP Server
+Build a web server using Node's http module.
+
 - Node.js http
 - Postman
 
@@ -67,7 +71,9 @@ Use an in-memory array.
 Success criteria:
 Postman can create, list, and delete books.
 
-#### 3. REST APIs: Build same web server using Express.
+#### 3. REST APIs
+Build same web server using Express.
+
 - Express
 
 Goal: understand what Express abstracts.
@@ -84,7 +90,8 @@ Still use an in-memory array.
 Success criteria:
 Same behavior as raw Node version, but cleaner routes.
 
-#### 4. Routing: Support /users, /books, /orders cleanly.
+#### 4. Routing
+Support /users, /books, /orders cleanly.
 
 Goal: organize routes cleanly.
 
@@ -108,8 +115,7 @@ Success criteria:
 No giant app.ts. Each route has its own file.
 
 #### 5. Pagination & Filtering
-
-Goal: learn common list endpoint patterns.
+Learn common list endpoint patterns.
 
 Add to GET /books:
 ?page=1&limit=10
@@ -126,7 +132,9 @@ Success criteria:
   "total": 42
 }
 
-#### 6. SQL: Replace your in-memory array with PostgreSQL.
+#### 6. SQL
+Replace your in-memory array with PostgreSQL.
+
 - Prisma
 - PostgreSQL
 
@@ -149,8 +157,7 @@ Success criteria:
 Restarting the server does not erase data.
 
 #### 7. Database Migrations
-
-Goal: learn schema evolution.
+Learn schema evolution.
 
 Start with:
 Book: title, author
@@ -166,6 +173,7 @@ Success criteria:
 Database schema changes without manually editing the database.
 
 #### 8. Validation
+
 - Zod
 
 Goal: validate input before it reaches your business logic.
@@ -206,7 +214,9 @@ npm test
 
 runs without manually starting the server.
 
-#### 10. Middleware: Implement error handler, CORS, and request validators.
+#### 10. Middleware
+Implement error handler, CORS, and request validators.
+
 - express.json()
 - CORS
 - request validation
@@ -260,7 +270,9 @@ DELETE /books/:id
 Success criteria:
 First request hits database. Second request hits cache.
 
-#### 13. Authentication: Registration, login, sign-in.
+#### 13. Authentication
+Registration, login, sign-in.
+
 - Sessions
 - JWT
 - bcrypt
@@ -280,7 +292,8 @@ sessions or JWT
 Success criteria:
 A user can register, login, and retrieve their profile.
 
-#### 14. Authorization: Protected endpoints, middleware (requireAuth, roles, permissions).
+#### 14. Authorization
+Protected endpoints, middleware (requireAuth, roles, permissions).
 
 Goal: restrict actions by user/role.
 
@@ -298,6 +311,7 @@ Success criteria:
 Unauthorized requests return 401; forbidden requests return 403.
 
 #### 15. Object Storage
+
 - Multer
 - Amazon S3
 
@@ -323,7 +337,9 @@ bookId
 Success criteria:
 Uploading a cover attaches it to a book.
 
-#### 16. Background Jobs: Worker processes uploads asynchronously.
+#### 16. Background Jobs
+Worker processes uploads asynchronously.
+
 - BullMQ
 - asynchronous processing
 
@@ -340,7 +356,8 @@ Use BullMQ.
 Success criteria:
 The API responds immediately while a worker handles processing.
 
-#### 17. Queue Patterns: Retries, dead-letter queues, delayed jobs, scheduled jobs, idempotent workers.
+#### 17. Queue Patterns
+Retries, dead-letter queues, delayed jobs, scheduled jobs, idempotent workers.
 
 Goal: understand robust job processing.
 
@@ -403,7 +420,8 @@ Idempotency-Key: abc-123
 Success criteria:
 Sending the same request twice does not create two loans or process two payments.
 
-#### 21. Docker: Containerize the application.
+#### 21. Docker
+Containerize the application.
 
 Goal: run the app consistently anywhere.
 
@@ -415,7 +433,8 @@ docker run ...
 
 starts the API.
 
-#### 22. Docker Compose: Run API + PostgreSQL + Redis together.
+#### 22. Docker Compose
+Run API + PostgreSQL + Redis together.
 
 Goal: run the whole backend stack locally.
 
@@ -430,7 +449,8 @@ docker compose up
 
 starts the full system.
 
-#### 23. Deployment: Deploy API, worker, database, Redis, and environment variables to a cloud platform.
+#### 23. Deployment
+Deploy API, worker, database, Redis, and environment variables to a cloud platform.
 
 Goal: run your backend outside your laptop.
 
@@ -483,69 +503,135 @@ You can open Swagger UI and test the API from the browser.
 
 ## Future Phases
 
-Phase 2: AI Engineering
+## Phase 2: AI Engineering
 
-1. Tokenization – Inspect tokenization.
-2. Embeddings – Compare document similarity.
-3. Cosine Similarity – Implement yourself.
-4. Chunking – Split a large document and search it.
-5. Vector Search – Semantic search over documents.
-6. Retrieval-Augmented Generation (RAG).
-7. Function Calling – Weather/calculator/search tools.
-8. Structured Output – Force validated JSON.
-9. Streaming – Stream generated tokens.
-10. Model Serving – Expose an LLM through POST /chat.
-11. Prompt Caching.
-12. Model Evaluation.
-13. Prompt Versioning.
-14. Batch Inference.
-15. GPU Utilization Basics.
-16. Guardrails & Safety Evaluation.
+#### 1. Tokenization
+Inspect tokenization.
 
-Phase 3: Distributed Systems
+#### 2. Embeddings
+Compare document similarity.
 
-1. Load Balancer – Alternate requests between servers.
-2. Caching – Redis in front of the database.
-3. Retry Logic – Retry transient failures.
-4. Rate Limiting – Requests/minute per client.
-5. Circuit Breaker – Stop calling failing services.
-6. Pub/Sub – Simple chat room.
-7. Eventual Consistency – Two databases syncing periodically.
-8. Replication – Write to two servers.
-9. Sharding – Partition users across databases.
-10. Distributed Tracing – Track requests across services.
-11. Distributed Locks.
-12. Leader Election.
-13. Service Discovery.
-14. Health Checks.
-15. Graceful Shutdown.
-16. Autoscaling.
-17. Consistent Hashing.
+#### 3. Cosine Similarity
+Implement yourself.
 
-Phase 4: AI Agents
+#### 4. Chunking
+Split a large document and search it.
 
-1. Tool Calling
-2. Memory
-3. Reflection
-4. Planning
-5. Multi-Agent Systems
-6. Workflow Graphs
-7. Human Approval
-8. Long-Term Memory
+#### 5. Vector Search
+Semantic search over documents.
 
-Phase 5: LLM Internals
+#### 6. Retrieval-Augmented Generation (RAG)
 
-1. Attention
-2. Transformer Forward Pass
-3. Sampling (temperature, top-k, top-p)
-4. Context Window
-5. KV Cache
-6. Quantization
+#### 7. Function Calling
+Weather/calculator/search tools.
 
-Phase 6: Model Training
+#### 8. Structured Output
+Force validated JSON.
 
-1. Gradient Descent
-2. Small Neural Network (NumPy)
-3. Fine-Tuning
-4. LoRA
-5. Distributed Training
+#### 9. Streaming
+Stream generated tokens.
+
+#### 10. Model Serving
+Expose an LLM through POST /chat.
+
+#### 11. Prompt Caching
+
+#### 12. Model Evaluation
+
+#### 13. Prompt Versioning
+
+#### 14. Batch Inference
+
+#### 15. GPU Utilization Basics
+
+#### 16. Guardrails & Safety Evaluation
+
+## Phase 3: Distributed Systems
+
+#### 1. Load Balancer
+Alternate requests between servers.
+
+#### 2. Caching
+Redis in front of the database.
+
+#### 3. Retry Logic
+Retry transient failures.
+
+#### 4. Rate Limiting
+Requests/minute per client.
+
+#### 5. Circuit Breaker
+Stop calling failing services.
+
+#### 6. Pub/Sub
+Simple chat room.
+
+#### 7. Eventual Consistency
+Two databases syncing periodically.
+
+#### 8. Replication
+Write to two servers.
+
+#### 9. Sharding
+Partition users across databases.
+
+#### 10. Distributed Tracing
+Track requests across services.
+
+#### 11. Distributed Locks
+
+#### 12. Leader Election
+
+#### 13. Service Discovery
+
+#### 14. Health Checks
+
+#### 15. Graceful Shutdown
+
+#### 16. Autoscaling
+
+#### 17. Consistent Hashing
+
+## Phase 4: AI Agents
+
+#### 1. Tool Calling
+
+#### 2. Memory
+
+#### 3. Reflection
+
+#### 4. Planning
+
+#### 5. Multi-Agent Systems
+
+#### 6. Workflow Graphs
+
+#### 7. Human Approval
+
+#### 8. Long-Term Memory
+
+## Phase 5: LLM Internals
+
+#### 1. Attention
+
+#### 2. Transformer Forward Pass
+
+#### 3. Sampling (temperature, top-k, top-p)
+
+#### 4. Context Window
+
+#### 5. KV Cache
+
+#### 6. Quantization
+
+## Phase 6: Model Training
+
+#### 1. Gradient Descent
+
+#### 2. Small Neural Network (NumPy)
+
+#### 3. Fine-Tuning
+
+#### 4. LoRA
+
+#### 5. Distributed Training
