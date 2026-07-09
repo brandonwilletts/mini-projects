@@ -1,58 +1,24 @@
-# ROADMAP
+# Roadmap
 
 Concept-driven software engineering mini-projects covering backend development, distributed systems, AI engineering, and machine learning.
 
-#### General Principles:
+#### General Principles
 - One concept per mini-project.
 - Projects should take roughly 30–120 minutes.
 - Focus on concepts over frameworks.
 - Build experiments, not products.
 
-#### Each mini-project README should answer:
+#### Each mini-project README should answer
 - What problem does this concept solve?
 - How does it work?
 - When would you use it?
 - What did I build?
 - Key takeaways.
 
-## Phase 1: Backend Fundamentals
+## 01-backend-fundamentals
 
-### Library API
-
-#### 1. Project Set-up & Configuration
-Configure linting, formatting, gitignore, and separate test / dev / prod environments, variables, and scripts.
-
-- Typescript
-- ESLint
-- Prettier
-- dotenv
-- gitignore
-- package.json
-- tsconfig.json
-- config.server.port / config.database.url / config.jwt.secret instead of process.env.PORT
-
-Goal: create the foundation.
-
-Build:
-backend-fundamentals/
-  src/
-  tests/
-  .env
-  .env.test
-  .gitignore
-  package.json
-  tsconfig.json
-
-Success Criteria:
-npm run dev
-npm run build
-npm run test
-npm run lint
-
-Create a typed config module:
-config.server.port
-config.database.url
-config.jwt.secret
+#### 01-project-setup
+Initialize a production-ready Node.js + TypeScript backend project from scratch.
 
 #### 2. HTTP Server
 Build a web server using Node's http module.
@@ -501,9 +467,9 @@ Add OpenAPI/Swagger docs for:
 Success criteria:
 You can open Swagger UI and test the API from the browser.
 
-## Future Phases
+# Future Phases
 
-## Phase 2: AI Engineering
+## 02-ai-engineering
 
 #### 1. Tokenization
 Inspect tokenization.
@@ -546,7 +512,7 @@ Expose an LLM through POST /chat.
 
 #### 16. Guardrails & Safety Evaluation
 
-## Phase 3: Distributed Systems
+## 03-distributed-systems
 
 #### 1. Load Balancer
 Alternate requests between servers.
@@ -592,7 +558,7 @@ Track requests across services.
 
 #### 17. Consistent Hashing
 
-## Phase 4: AI Agents
+## 04-ai-agents
 
 #### 1. Tool Calling
 
@@ -610,7 +576,7 @@ Track requests across services.
 
 #### 8. Long-Term Memory
 
-## Phase 5: LLM Internals
+## 05-llm-internals
 
 #### 1. Attention
 
@@ -624,7 +590,7 @@ Track requests across services.
 
 #### 6. Quantization
 
-## Phase 6: Model Training
+## 06-model-training
 
 #### 1. Gradient Descent
 
