@@ -8,53 +8,16 @@ Concept-driven software engineering mini-projects covering backend development, 
 - Focus on concepts over frameworks.
 - Build experiments, not products.
 
-#### Each mini-project README should answer
-- What problem does this concept solve?
-- How does it work?
-- When would you use it?
-- What did I build?
-- Key takeaways.
-
 ## 01-backend-fundamentals
 
 #### 01-project-setup
 Initialize a production-ready Node.js + TypeScript backend project from scratch.
 
-#### 2. HTTP Server
-Build a web server using Node's http module.
+#### 02-http-server
+Build a basic HTTP server from scratch using Node’s http module that handles REST endpoints and manages book data in memory.
 
-- Node.js http
-- Postman
-
-Build a raw Node server with:
-GET /
-GET /health
-GET /books
-POST /books
-DELETE /books/:id
-Use an in-memory array.
-
-Success criteria:
-Postman can create, list, and delete books.
-
-#### 3. REST APIs
-Build same web server using Express.
-
-- Express
-
-Goal: understand what Express abstracts.
-
-Rebuild the same API using Express:
-GET /health
-GET /books
-GET /books/:id
-POST /books
-PUT /books/:id
-DELETE /books/:id
-Still use an in-memory array.
-
-Success criteria:
-Same behavior as raw Node version, but cleaner routes.
+#### 03-express-server
+Build same web server but using Express.
 
 #### 4. Routing
 Support /users, /books, /orders cleanly.
@@ -494,23 +457,26 @@ Weather/calculator/search tools.
 #### 8. Structured Output
 Force validated JSON.
 
-#### 9. Streaming
+#### 9. AI Harness
+Build a reusable AI wrapper that standardizes interactions with an LLM.
+
+#### 10. Streaming
 Stream generated tokens.
 
-#### 10. Model Serving
+#### 11. Model Serving
 Expose an LLM through POST /chat.
 
-#### 11. Prompt Caching
+#### 12. Prompt Caching
 
-#### 12. Model Evaluation
+#### 13. Model Evaluation
 
-#### 13. Prompt Versioning
+#### 14. Prompt Versioning
 
-#### 14. Batch Inference
+#### 15. Batch Inference
 
-#### 15. GPU Utilization Basics
+#### 16. GPU Utilization Basics
 
-#### 16. Guardrails & Safety Evaluation
+#### 17. Guardrails & Safety Evaluation
 
 ## 03-distributed-systems
 
