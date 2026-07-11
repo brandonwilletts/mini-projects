@@ -10,14 +10,14 @@ Concept-driven software engineering mini-projects covering backend development, 
 
 ## 01-backend-fundamentals
 
-#### 01-project-setup
+#### ✅ 01-project-setup
 Initialize a production-ready Node.js + TypeScript backend project from scratch.
 
-#### 02-http-server
+#### ✅ 02-http-server
 Build a basic HTTP server from scratch using Node’s http module that handles REST endpoints and manages book data in memory.
 
 #### 03-express-server
-Build same web server but using Express.
+Build the same web server but using Express.
 
 #### 4. Routing
 Support /users, /books, /orders cleanly.
