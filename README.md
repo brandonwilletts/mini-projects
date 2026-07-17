@@ -16,7 +16,7 @@ Initialize a production-ready Node.js + TypeScript backend project from scratch.
 #### ✅ 02-http-server
 Build a basic HTTP server from scratch using Node’s http module that handles REST endpoints and manages book data in memory.
 
-#### 03-express-server
+#### ✅ 03-express-server
 Build the same web server but using Express.
 
 #### 4. Routing
