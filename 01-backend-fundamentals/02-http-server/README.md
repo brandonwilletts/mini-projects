@@ -42,6 +42,14 @@ To set-up endpoints, we need to parse the incoming request and, depending on the
 
 This is all defined within the `createServer()` method. Even with a small number of endpoints, it's pretty easy to see how cumbersome this could get. I expect Express to provide abstraction and modularity to this structure.
 
+## Endpoints
+- GET /health
+- GET /books
+- GET /books/:id
+- POST /books
+- PUT /books/:id
+- DELETE /books/:id
+
 ## Resources
 - https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview
 - https://nodejs.org/learn
