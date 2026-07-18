@@ -19,47 +19,11 @@ Build a basic HTTP server from scratch using Node’s http module that handles R
 #### ✅ 03-express-server
 Build the same web server but using Express.
 
-#### 4. Routing
-Support /users, /books, /orders cleanly.
+#### ✅ 04-routing
+Separate related endpoints into dedicated route modules.
 
-Goal: organize routes cleanly.
-
-Add route groups:
-/books
-/users
-/orders or /loans
-
-Suggested domain:
-Users borrow Books through Loans
-
-Routes:
-GET /users
-POST /users
-GET /books
-POST /books
-GET /loans
-POST /loans
-
-Success criteria:
-No giant app.ts. Each route has its own file.
-
-#### 5. Pagination & Filtering
-Learn common list endpoint patterns.
-
-Add to GET /books:
-?page=1&limit=10
-?search=dune
-?author=asimov
-?sort=title
-?available=true
-
-Success criteria:
-{
-  "data": [],
-  "page": 1,
-  "limit": 10,
-  "total": 42
-}
+#### 05-pagination-and-filtering
+Extend GET endpoints to support query parameters for pagination, filtering, searching, and sorting so clients can efficiently request only the data they need.
 
 #### 6. SQL
 Replace your in-memory array with PostgreSQL.
@@ -84,6 +48,8 @@ POST /loans
 
 Success criteria:
 Restarting the server does not erase data.
+
+Add services and controllers.
 
 #### 7. Database Migrations
 Learn schema evolution.
@@ -130,7 +96,7 @@ Goal: prove your API works.
 
 Use Vitest + Supertest.
 
-Write tests for:
+Write tests for all endpoints, inc:
 GET /health
 POST /books
 GET /books
@@ -149,6 +115,7 @@ Implement error handler, CORS, and request validators.
 - express.json()
 - CORS
 - request validation
+- custom logger
 - error handling
 
 Goal: understand request pipeline.
