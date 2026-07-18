@@ -1,17 +1,4 @@
-type Book = {
-  id: number;
-  title: string;
-  author: string;
-  year: number;
-  genre: string;
-  available: boolean;
-};
-
-export function addBook(title: string, author: string, year: number, genre: string, available: boolean) {
-  const newBook = { id: books.length + 1, title, author, year, genre, available }
-  books.push(newBook);
-  return newBook;
-}
+import { type Book, type User, type Loan } from './types.js';
 
 export const books: Book[] = [
   {
@@ -93,5 +80,81 @@ export const books: Book[] = [
     year: 2011,
     genre: 'Science Fiction',
     available: true,
+  },
+];
+
+export const users: User[] = [
+  {
+    id: 11,
+    name: 'Alice Johnson',
+    email: 'alice@example.com'
+  },
+  {
+    id: 12,
+    name: 'Bob Smith',
+    email: 'bob@example.com'
+  },
+  {
+    id: 13,
+    name: 'Charlie Brown',
+    email: 'charlie@example.com'
+  },
+  {
+    id: 14,
+    name: 'Diana Miller',
+    email: 'diana@example.com'
+  },
+  {
+    id: 15,
+    name: 'Ethan Wilson',
+    email: 'ethan@example.com'
+  },
+  {
+    id: 16,
+    name: 'Fiona Taylor',
+    email: 'fiona@example.com'
+  }
+];
+
+export const loans: Loan[] = [
+  {
+    id: 17,
+    userId: 11, // Alice Johnson
+    bookId: 2, // The Hobbit
+    borrowedAt: '2026-07-01T09:00:00Z',
+    dueAt: '2026-07-15T09:00:00Z',
+    returnedAt: null,
+  },
+  {
+    id: 18,
+    userId: 12, // Bob Smith
+    bookId: 5, // To Kill a Mockingbird
+    borrowedAt: '2026-06-20T14:30:00Z',
+    dueAt: '2026-07-04T14:30:00Z',
+    returnedAt: '2026-07-03T16:45:00Z',
+  },
+  {
+    id: 19,
+    userId: 13, // Charlie Brown
+    bookId: 8, // Brave New World
+    borrowedAt: '2026-07-10T11:15:00Z',
+    dueAt: '2026-07-24T11:15:00Z',
+    returnedAt: null,
+  },
+  {
+    id: 20,
+    userId: 14, // Diana Miller
+    bookId: 1, // Dune
+    borrowedAt: '2026-06-15T08:00:00Z',
+    dueAt: '2026-06-29T08:00:00Z',
+    returnedAt: '2026-06-28T10:20:00Z',
+  },
+  {
+    id: 21,
+    userId: 15, // Ethan Wilson
+    bookId: 7, // The Lord of the Rings
+    borrowedAt: '2026-07-12T17:45:00Z',
+    dueAt: '2026-07-26T17:45:00Z',
+    returnedAt: null,
   },
 ];
